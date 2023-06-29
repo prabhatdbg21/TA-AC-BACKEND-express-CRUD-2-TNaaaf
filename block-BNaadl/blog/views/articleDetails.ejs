@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <a href="/article">   <!-- GET request on /books/ -->
+            <h2 class="">Article</h2>
+        </a>
+    </header>
+    <div class="">
+        <h1 class=""> <%= article.title %> </h1> 
+        <h2 class=""> <%= article.author %> </h2>
+        <p class=""> <%= article.description %> </p>
+        <p class=""> <%= article.tag %> </p>
+        <h3 class="">likes: <%= article.like %> </h3>
+        <div class="">
+            <a href="/article/<%= article.id %>/edit">
+                <button class=""> Edit</button>
+            </a>
+            <a href="/article/<%= article.id %>/delete">
+                <button class=""> Delete </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

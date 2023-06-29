@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title> ARTICLE </title>
+</head>
+<body>
+    <header class="">
+        <a href="/article">   <!-- GET request on /books/ -->
+            <h2 class="">Article</h2>
+        </a>
+        <nav>
+            <a href="/article/new">  <!-- GET request on /books/new -->
+                <button class=""> Add Book </button>
+            </a>
+        </nav>
+    </header>
+    <div class="">
+        <h1 class=""> Lising Articles </h1>
+        <% articles.forEach(article => { %>
+          <div class="">
+            <a href="/article/<%= article._id %>">
+                <%= article.title %>
+              </a>
+          </div>
+        <% }) %>
+    </div>
+</body>
+</html>
