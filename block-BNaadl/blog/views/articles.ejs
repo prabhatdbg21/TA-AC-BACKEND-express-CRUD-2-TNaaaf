@@ -21,13 +21,18 @@
     </header>
     <div class="">
         <h1 class=""> Lising Articles </h1>
-        <% articles.forEach(article => { %>
-          <div class="">
-            <a href="/article/<%= article._id %>">
-                <%= article.title %>
-              </a>
-          </div>
-        <% }) %>
+        <% if(articles.length) { %>
+
+            <% articles.forEach(article => { %>
+            <div class="">
+                <a href="/article/<%= article._id %>">
+                    <%= article.title %>
+                </a>
+            </div>
+            <% }) %>
+        <% } else {%>
+            <h2 class=""> No Articles Present </h2>
+        <% } %>
     </div>
 </body>
 </html>
