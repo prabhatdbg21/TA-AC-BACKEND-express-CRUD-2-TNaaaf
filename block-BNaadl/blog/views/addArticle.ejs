@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <a href="/article">   <!-- GET request on /books/ -->
+            <h2 class="">Article</h2>
+        </a>
+    </header>
+    <div class="">
+        <!-- action="/article"    path where it going to submit form   and method="POST"   method it use is POST-->
+        <form action="/article" method="POST" class="">
+            <h2 class="">NEW ARTICLE</h2>
+            <input type="text" name="title" class="" placeholder="Add Title">  
+            <textarea class=""  name="description" rows="4" placeholder="Add Description .."></textarea>
+            <input type="text" name="tag" class="" placeholder="Add Tag">
+            <input type="text" name="author" class="" placeholder="Author name">
+            <input type="number" name="like" class="" placeholder="Number of likes">
+            <div class="">
+                <!-- when we submit the form by clicking on Add Article  it will POST request on /article  -->
+                <button class="" type="submit">Add Article</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

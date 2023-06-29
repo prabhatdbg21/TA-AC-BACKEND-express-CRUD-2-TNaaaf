@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <a href="/article">   <!-- GET request on /books/ -->
+            <h2 class="">Article</h2>
+        </a>
+        <nav>
+            <a href="/article/<%= article._id %>">  <!-- GET request on /books/new -->
+                <button class=""> Article Detail </button>
+            </a>
+        </nav>
+    </header>
+    <div class="">
+        <form action="/article/<%= article.id %>" method="POST" class="">
+            <h2 class="">Article Details</h2>
+            <input type="text" name="title" class="" placeholder="Add Title" value="<%= article.title %>">
+            <textarea class=""  name="description" rows="4" placeholder="Add Description ..">
+                <%= article.description %>
+            </textarea> 
+            <input type="text" name="tag" class="" placeholder="Tag" value="<%= article.tagr %>">
+            <input type="text" name="author" class="" placeholder="Author name" value="<%= article.author %>">
+            <input type="number" name="like" class="" placeholder="Numbers of like" value="<%= article.like %>"> 
+            
+            <div class="">
+                <button class="" type="submit">Update Article</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
