@@ -1,0 +1,18 @@
+<% include partials/header %> 
+    <div class="">
+        <form action="/article/<%= article.id %>" method="POST" class="">
+            <h2 class="">Article Details</h2>
+            <input type="text" name="title" class="" placeholder="Add Title" value="<%= article.title %>">
+            <textarea class=""  name="description" rows="4" placeholder="Add Description ..">
+                <%= article.description %>
+            </textarea> 
+            <input type="text" name="tag" class="" placeholder="Tag" value="<%= article.tag %>">
+            <input type="text" name="author" class="" placeholder="Author name" value="<%= article.author %>">
+            <input type="number" name="like" class="" placeholder="Numbers of like" value="<%= article.like %>"> 
+            
+            <div class="">
+                <button class="" type="submit">Update Article</button>
+            </div>
+        </form>
+    </div>
+<% include partials/footer %> 

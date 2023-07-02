@@ -1,0 +1,25 @@
+<% include partials/header %> 
+    <div class="">
+        <h1 class=""> <%= article.title %> </h1> 
+        <h2 class=""> <%= article.author %> </h2>
+        <p class=""> <%= article.description %> </p>
+        <% article.tag.forEach(tag => { %>   <!-- tags is an [ ] object so we use forEach -->
+            <span class=""> <%= tag %> </span>
+        <% }) %>
+        <h3 class="">likes: <%= article.like ? article.like : 0 %> </h3>
+        <a href="/article/<%= article.id %>/likes">
+            <button class=""> Like </button>
+        </a>
+        <a href="/article/<%= article.id %>/dislikes">
+            <button class=""> Dislike </button>
+        </a>
+        <div class="">
+            <a href="/article/<%= article.id %>/edit">
+                <button class=""> Edit</button>
+            </a>
+            <a href="/article/<%= article.id %>/delete">
+                <button class=""> Delete </button>
+            </a>
+        </div>
+    </div>
+<% include partials/footer %> 
