@@ -6,7 +6,7 @@ var articleSchema = new Schema({
     description: String,
     tag: [String],
     author: String,
-    like: Number
+    like: { type: Number, default: 0}
 }, {timestamps: true}) // give us created and updated time
 
 var Article = mongoose.model('Article' , articleSchema);  // models name must be singular and start with capital letter
