@@ -1,0 +1,12 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var articleSchema = new Schema({
+    title: { type: String, required: true },  // any book must have title
+    description: String,
+    comments: [{type: Schema.Types.ObjectId, ref: "Comment"}]
+}, {timestamps: true}) // give us created and updated time
+
+var Article = mongoose.model('Article' , articleSchema);  // models name must be singular and start with capital letter
+
+module.exports = Article;

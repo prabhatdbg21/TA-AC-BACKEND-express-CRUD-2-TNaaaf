@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+    <div class="">
+        <h1 class=""> Lising Articless </h1>
+        <% articles.forEach(article => { %>
+            <section class="">
+                <div class="">
+                    <h2 class=""> <%= article.title %> </h2>
+
+                    <a href="/article/<%= article._id %>">   <!-- GET request on /articles/:_id --> 
+                        <button class="">Show</button>
+                    </a>
+                </div>
+            </section>
+        <% }) %>
+
+    </div>
+
+ <%- include('partials/footer') -%>
